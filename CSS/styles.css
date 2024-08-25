@@ -1,0 +1,477 @@
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Teko", sans-serif;
+}
+/*------------ Body ------------------------------*/
+body {
+    background-color: #12151b;
+    color: whitesmoke; 
+}
+.card {
+    width: 75%;
+    height: 80%;
+    border: 8px;
+    border-style: outset; 
+    border-color: #181B21;
+    background-color:#181B21; 
+    box-shadow: 0px 0px 10vh #43a8b7;
+    position:absolute; 
+    top:50%; 
+    left:50%; 
+    transform:translate(-50%,-50%); 
+    border-radius: 50px;
+    background-attachment: fixed;
+    animation:pulse 5000ms infinite alternate;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo {
+    font-size: 20px;
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+}
+/*------------ Nav Bar ---------------------------*/
+.navbar a {
+    font-size: 18px;
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .4s;
+}
+.navbar a:hover,
+.navbar a.active {
+    color: #5de9fe;
+    text-shadow: 0px 0px 20px #32828e;
+}
+/*------------ Home page -------------------------*/
+.home {
+    position: relative;
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    padding: 50px 10% 0;
+}
+.home-content {
+    max-width: 425px;
+}
+.home-content h3 {
+    font-size: 25px;
+    font-weight: 500;
+}
+.home-content h3 span{
+    color: #5de9fe;
+    text-decoration: none;
+    transition: .4s ease;
+}
+.home-content h3 span:hover {
+    color: whitesmoke;
+    text-shadow: 0 0 25px #5de9fe;
+}
+.home-content h1 {
+    color: #5de9fe;
+    font-size: 46px;
+    font-weight: 500;
+    margin: -3px 0;
+    text-decoration: none;
+    transition: .4s ease;
+}
+.home-content h1:hover {
+    color: whitesmoke;
+    text-shadow: 0 0 25px #5de9fe;
+}
+.home-content p {
+    font-size: 18px;
+}
+.home-img img{
+    max-width: 350px;
+    margin-right: -20px;
+}
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #5de9fe;
+    border-radius: 40px;
+    box-shadow: 0 0 10px #5de9fe;
+    font: 16px;
+    color: #181B21;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: .4s ease;
+    border: 2px solid #5de9fe;
+}
+.btn:hover {
+    background: #181B21;
+    color: #5de9fe;
+    border: 2px solid #5de9fe;
+    box-shadow: 0 0 25px #5de9fe;
+}
+/*------------ Social Media Icons ----------------*/
+.social_media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    background: transparent;
+    border: 2px solid #5de9fe;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #5de9fe;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    transition: .4s ease;
+}
+.social_media a:hover {
+    background: #5de9fe;
+    color: #181B21;
+    box-shadow: 0 0 25px #5de9fe;
+}
+/*------------ About page ------------------------*/
+.about {
+    display: flex;
+    max-width: 800px;
+    margin-left: 200px;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+  }
+  .about div {
+    width: 50%;
+    display: inline-block;
+    text-align: left;
+  }
+  .about #aboutdiv2 {
+    margin-top: 100px;
+    margin-left: 20px;
+  }
+  .about #aboutdiv2 h2 {
+    color: #5de9fe;
+    font-family: "Cedarville Cursive", cursive;
+    font-size: 30px;
+  }
+  .about div h1 {
+    color: #5de9fe;
+    font-size: 40px;
+  }
+  .about div p {
+    color: whitesmoke;
+    font-size: 20px;
+  }
+/*------------ Skills page -----------------------*/
+.skills {
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.skills #icon{
+    width: 670px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.skills div h1 {
+    font-size: 30px;
+}
+.skills div h2 {
+    font-size: 30px;
+    margin-left: 83px;
+    margin-top: 90px;
+}
+.skills div i {
+    color:#5de9fe;
+    font-size: 70px;
+    margin-left: 65px;
+    margin-top: 20px;
+    transition: transform 0.4s;
+}
+.skills div i:hover {
+    transform: scale(2);
+}
+.skills div i::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    background-color: transparent;
+    color: whitesmoke;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: "Teko", sans-serif;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+.skills div i:hover::after {
+    opacity: 1;
+}
+/*------------ Certificates page --------------------*/
+.certificates {
+    min-height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.certificates div {
+    padding-top: 165px;
+}
+.certificates h1 {
+    color: #5de9fe;
+}
+.certificates div img {
+    margin-top: 10px;
+    margin-left: 65px;
+    max-width: 180px; 
+    max-height: 150px;
+    border: 2px solid #5de9fe;
+    transition: .4s;
+}
+.certificates div img:hover {
+    transform: scale(3);
+}
+.certificates #download {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    outline-style: none;
+    background: none;
+    border: none;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-left: 55px;
+    color: #5de9fe;
+    width: 200px;
+    height: 60px;
+    padding: 0;
+    transition: 0.4s;
+}
+.certificates #download:hover{
+    color: whitesmoke;
+    text-shadow: 0 0 25px #5de9fe;
+    transition: .4s ease-in-out;
+}
+/*------------ Contact page ----------------------*/
+.contact {
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact form {
+    width: 670px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    flex-wrap: wrap;
+}
+.contact form input {
+    width: 300px;
+    height: 50px;
+    padding-left: 10px;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    margin-bottom: 10px;
+    background: none;
+    border-bottom: 2px solid #5de9fe;
+    color: whitesmoke;
+}
+.contact form input::placeholder{
+    color: #5de9fe;
+}
+.contact form #number,
+.contact form #company {
+    margin-left: 20px;
+}
+.contact form h4 {
+    color: #5de9fe;
+    font-weight: 300;
+    width: 600px;
+    margin-top: 20px;
+}
+.contact form textarea {
+    resize: none;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #5de9fe;
+    color: whitesmoke;
+    font-weight: 200;
+    font-size: 18px;
+    padding: 10px;
+    outline: none;
+    min-height: 90px;
+    max-height: 90px;
+    min-width: 620px;
+    max-width: 620px;
+}
+.contact form h4 {
+    font-size: 20px;
+}
+.contact textarea::placeholder {
+    color: #5de9fe;
+}
+.contact form #button {
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 24px;
+    color: #5de9fe;
+    width: 200px;
+    height: 60px;
+    padding: 0;
+    margin-bottom: 30px;
+    transition: 0.4s;
+}
+.contact #button:hover{
+    color: whitesmoke;
+    text-shadow: 0 0 25px #5de9fe;
+    transition: .4s ease-in-out;
+}
+.card #bxcontact { color: #32828e;
+    position: absolute;
+    top: 120px;
+    left: 400px;
+    display: flex;
+    justify-content: center;
+    font-size: 20em;
+}
+/*------------ Fullstack page --------------------*/
+.fullstack {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    padding: 100px 10% 0;
+}
+.fullstack-content {
+    max-width: 700px;
+}
+.fullstack-content h1 {
+    font-size: 46px;
+    font-weight: 500;
+    margin: -3px 0;
+}
+.fullstack-content p {
+    font-size: 20px;
+}
+.fullstack-content h1 span{
+    color: #5de9fe;
+    text-decoration: none;
+    transition: .4s ease;
+}
+.fullstack-content h1 span:hover {
+    color: whitesmoke;
+    text-shadow: 0 0 25px #5de9fe;
+}
+.fullstack-content h2 span a {
+    color: #5de9fe;
+    text-decoration: none;
+    transition: .4s ease;
+}
+.fullstack-content h2 span a:hover {
+    color: whitesmoke;
+    text-shadow: 0 0 25px #5de9fe;
+}
+/*------------ Fullstack-do page -----------------*/
+.fullstack-do {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    padding: 100px 10% 0;
+}
+.fullstack-do-content {
+    max-width: 650px;
+}
+.fullstack-do-content h1 {
+    font-size: 46px;
+    font-weight: 500;
+    margin: -3px 0;
+}
+.fullstack-do-content p {
+    font-size: 20px;
+}
+.fullstack-do-content h1 span {
+    color: #5de9fe;
+    text-decoration: none;
+    transition: .4s ease;
+}
+.fullstack-do-content h1 span:hover {
+    color: whitesmoke;
+    text-shadow: 0 0 25px #5de9fe;
+}
+li {
+    transition: .4s;
+}
+li::marker {
+    color: #5de9fe;
+}
+li:hover {
+    color: whitesmoke;
+    text-shadow: 0 0 25px #5de9fe;
+}
+.text_list {
+    display: flex;
+    text-align:left;
+    margin-top: 1.5em;
+    margin-left: 10%;
+}
+#bullet_points{
+    font-size: 18px;
+    margin-left: 22%;
+}
+li::marker {
+    color:#5de9fe;
+}
+.previous {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    color: #5de9fe;;
+    transition: .4s;
+    margin: 2% 0 0 8.6%;
+}
+.previous:hover {
+    color: whitesmoke;
+    text-shadow: 0 0 25px #5de9fe;
+}
+/*------------ Profil Pic ------------------------*/
+/*------------ Page Transitions ------------------*/
+/*----------- @Keyframes  ------------------------*/
+@keyframes pulse {
+    from { box-shadow:0px 0px 10vh 5px #193d44 }
+    to { box-shadow:0px 0px 10vh 5px #43a8b7 }   
+}
