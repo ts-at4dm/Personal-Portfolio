@@ -184,26 +184,31 @@ body {
     justify-content: center;
     align-items: center;
 }
-.skills #icon{
-    width: 670px;
+.skills #icons{
+    width: 800px;
     height: 400px;
-    display: flex;
+    display: block;
     justify-content: center;
-    flex-wrap: wrap;
+    align-content: center;
+    /* flex-wrap: wrap; */
 }
 .skills div h1 {
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 1em;
     font-size: 30px;
 }
 .skills div h2 {
+    text-align: center;
     font-size: 30px;
     margin-left: 83px;
     margin-top: 90px;
 }
-.skills div i {
+.skills i {
     color:#5de9fe;
     font-size: 70px;
-    margin-left: 65px;
-    margin-top: 20px;
+    margin-left: 1.5em;
+    margin-bottom: 1.5em;
     transition: transform 0.4s;
 }
 .skills div i:hover {
@@ -227,6 +232,9 @@ body {
 .skills div i:hover::after {
     opacity: 1;
 }
+data-tooltip {
+    font-weight: lighter;
+}
 /*------------ Certificates page --------------------*/
 .certificates {
     min-height: 65vh;
@@ -238,7 +246,14 @@ body {
     padding-top: 165px;
 }
 .certificates h1 {
-    color: #5de9fe;
+    color: #5de9fe;;
+}
+#cert1 h1{
+    margin-left: 70px;
+}
+
+#cert2 h1{
+    margin-left: 88px;
 }
 .certificates div img {
     margin-top: 10px;
